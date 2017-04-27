@@ -1,0 +1,5 @@
+firebase
+react-redux
+redux-thunk
+eslint
+eslint-config-rallycoding
