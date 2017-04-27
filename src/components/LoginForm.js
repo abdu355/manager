@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Text } from 'react-native';
+import { Text, LayoutAnimation, Platform, UIManager } from 'react-native';
 import { connect } from 'react-redux';
 import {
   emailChanged,
@@ -9,6 +9,13 @@ import {
 import { Card, CardSection, Input, Button, Spinner } from './common';
 
 class LoginForm extends Component {
+  componentWillUpdate() {
+      //call spring animation when component is about to re-render to device
+      if (Platform.OS === 'android') {
+        UIManager.setLayoutAnimationEnabledExperimental(true);
+      }
+      LayoutAnimation.spring();
+  }
   onEmailChange(text) {
     this.props.emailChanged(text);
   }
