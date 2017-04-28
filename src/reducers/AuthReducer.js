@@ -29,7 +29,7 @@ export default (state = INITIAL_STATE, action) => {
           return { ...state, password: action.payload };
         case LOGIN_USER_SUCCESS:
         //save user model on state.auth.user
-          return { ...state, ...INITIAL_STATE, user: action.payload, error: 'Success' };
+          return { ...state, ...INITIAL_STATE, user: action.payload };
         case LOGIN_USER_FAIL:
           //show error and reset password
           return { ...state,
