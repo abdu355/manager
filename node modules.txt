@@ -1,5 +1,7 @@
 firebase
 react-redux
 redux-thunk
+lodash
+react-native-router-flux
 eslint
 eslint-config-rallycoding
